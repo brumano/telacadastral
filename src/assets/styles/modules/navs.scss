@@ -1,0 +1,17 @@
+.nav-pills{
+	li{
+		a{
+			padding: 5px;
+			color: #525252;
+			&:hover, &:active, &.hover, &.active{
+				background-color: #0199FE;
+				color: #fff;	
+				font-weight: bold;
+				&>:nth-child(){
+					color: #fff;	
+					font-weight: bold;
+				}
+			}	
+		}
+	}
+}

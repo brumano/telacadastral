@@ -1,0 +1,66 @@
+@import "../_core/variables";
+
+
+
+
+.text-xsm {font-size: 12px !important;}
+.text-sm  {font-size: 14px !important;}
+.text-md  {font-size: 16px !important;}
+.text-lg  {font-size: 18px !important;}
+.text-xlg {font-size: 20px !important;}
+
+.text-black {
+    color: $paleta-blk;
+}
+.text-white {
+    color: $paleta-wht;
+}
+.text-blue-01 {
+    color: $paleta-01;
+}
+.text-blue-02 {
+    color: $paleta-02;
+}
+
+.text-green-01 {
+    color: $paleta-04;
+}
+
+.text-gray-01 {
+    color: $paleta-07;
+}
+
+.text-gray-02 {
+    color: $paleta-08;
+}
+
+.text-pink-01 {
+    color: $paleta-09;
+}
+
+.text-purple-01 {
+    color: $paleta-11;
+}
+
+.text-yellow-01 {
+    color: $paleta-12;
+}
+
+
+.text-nowarp { white-space: nowrap !important;}
+.no-break-text {
+    word-wrap: normal !important;
+    white-space: nowrap !important;
+}
+.break-text {
+    white-space: normal !important;
+    word-wrap: break-word !important;
+}
+.italic-text {font-style: italic !important;}
+.normal-text {font-weight: normal !important;}
+.bold-text {font-weight: bolder !important;}
+.condensed-text {font-weight: lighter !important;}
+.noTransform-text {text-transform: none !important;}
+.capitalcase-text {text-transform: capitalize !important;}
+.lowercase-text {text-transform: lowercase !important;}
+.no-underlineText, .no-underlineText:hover {text-decoration: none !important;}

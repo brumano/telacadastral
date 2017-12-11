@@ -1,0 +1,63 @@
+.adm-msgs-container{
+	.adm-msgs, .adm-phrases{
+		.title{width: 230px;}
+
+		.color{    
+			width: 40px;
+    		margin: 0 20px; 
+    	}
+
+    	.item-category{
+    		display: inline-block;
+    		max-width: 230px;
+    	}
+    }
+
+    .adm-msgs{
+    	
+	}
+	.adm-phrases{
+		.category{
+			
+			max-width: 250px;
+			display: inline-block;
+
+			.nav-pills{
+				li{
+					a{
+						display: flex;
+    					justify-content: space-between;
+    					align-items: center;
+
+    					.title{
+						    width: calc(100% - 40px);
+    						font-size: 14px;
+    						color: #525252;    
+    					}
+    					.headlight{
+							    width: 30px;
+							    height: 30px;
+							    border-radius: 3px;
+    					}	
+
+    					&:hover{
+    						&>.title{
+    							color: #fff;
+    							font-weight: bold;
+    						}
+    					}
+
+					}
+				}
+			}
+		}
+		.category-item-opened{
+			display: inline-block;
+			width: calc(100% - 300px);
+		}
+	}
+
+}
+
+
+

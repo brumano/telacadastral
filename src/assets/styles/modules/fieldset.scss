@@ -1,0 +1,31 @@
+@import "../_core/variables";
+
+fieldset {
+    border-top: 1px solid #D1D1D1;
+    margin-bottom: 20px;
+    
+    legend {
+        border: none;
+        color: #009BFF;
+        font-size: 16px;
+        background: #FFF;
+        width: auto;
+        padding: 0 10px 0 0;
+        margin-bottom: 20px;
+    }
+    .form-group, .list-group{
+        padding-left: 20px;
+    }
+    .list-group{
+        li{
+            margin-bottom: 10px;
+            a{
+                font-size: 14px;
+                color: #525252;
+                &:hover{
+                    color: #525252;
+                }
+            }
+        }
+    }
+}

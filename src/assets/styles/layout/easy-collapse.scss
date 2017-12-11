@@ -1,0 +1,21 @@
+.easyCollapse {
+    margin-bottom: 10px;
+
+    .easyCollapse-tytle {
+        border-bottom: 1px solid #d1d1d1;
+        width: 100%;
+        color: #525252;
+        font-size: 16px;
+        display: inline-block;
+        text-transform: capitalize;
+        padding-left: 10px;
+
+        &:hover, &:active, &:focus {
+            text-decoration: none;
+        }
+    }
+
+    .easyCollapse-content {
+        padding-top: 15px;
+    }
+}

@@ -1,0 +1,63 @@
+@import "../../_core/variables";
+
+.lateral-menu {
+
+	position: fixed;
+    left: 0;
+    height: 100%;
+    padding-top: 60px;
+    top: 0;
+    background-color: $paleta-16;
+    width: 130px;
+
+    .menu-containers {
+
+    	.menu-item {
+
+    		font-size: $fnt-sm;
+		    margin: 15px 0;
+		    padding: 10px;
+		    cursor: pointer;
+
+		    &:hover{
+
+		    	background-color: #1F3950;
+		    }
+
+		    &:hover > span{
+
+	    	    color: $paleta-17;
+	    	    font-weight: bold;
+
+		    }
+
+			&.active {
+
+				background-color: #1E3346;
+
+				a:hover, a:focus, a:active {
+
+					text-decoration: none;
+
+				}
+
+				span.menu-name {
+
+					color: #8CD3FF;
+					font-weight: bold;
+    				text-decoration: none;
+					
+				}
+			}
+
+			span.menu-name {
+
+				color: #FFF;
+				font-weight: 100;
+
+			}
+    	}
+
+    }
+
+}

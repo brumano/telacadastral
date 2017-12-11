@@ -1,0 +1,68 @@
+.container-editar-humor{
+	.form-edit-humor{
+		.info-humor{
+			.select-icon{
+				.icon{
+					display: flex; 
+					align-items: center;
+				}
+			}
+		}
+		.frases-humor{
+			input{
+				margin: 0 13px;
+			}
+			.buttons-signs{
+				display: flex;
+				align-items: center;
+			}
+			.btn-plus_gray{
+			    margin-left: 5px;
+			}
+		}
+		.options-humor{
+			.radio{
+			    margin: 0 0px 0 30px;
+			}
+			.show-after-times{
+				width: 40px;
+    			margin-left: 18px;
+    			display: inline-block;
+    			padding: 6px 6px;
+    			text-align: center;	
+			}
+
+			.itens-to-change{
+		        .item{
+		        	display: flex;
+					justify-content: space-between;
+    				.icons{
+						display: flex;
+    					align-items: center;    						
+    				}
+    				input{
+    					&.form-control{
+    						margin: 4px 10px;
+    					}
+    				}
+    			}
+    			.choice-destiny{
+				    margin: 10px 0px 10px 88px;
+				    .destiny-itens{
+				    	.item{
+				    		display: flex;
+    						justify-content: space-between;
+    						align-items: center;
+    						margin: 4px 4px 4px 24px;
+    						max-width: 60%;	
+    						.btn{
+    							margin: 0 5px;
+    						}
+				    	}
+			    	    
+				    }
+    			}
+			}
+		}
+	}
+}

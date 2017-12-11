@@ -1,0 +1,147 @@
+<div>
+    <a href="/mensagens/" class="button-goBack">
+        <button class="btn svg-bg-icon go-back_blue" type="button">
+				                        	
+		</button>
+        <span class="italic-text text-md text-blue-02">Voltar</span>
+    </a>
+</div>
+
+<div class="container-nova-msg">
+
+    <form class="formEditInsert" name="formEditInsert" ng-submit="save(formEditInsert.$valid, formEditInsert)" novalidate>
+        <div class="row">
+            <div>
+                <p ng-show="formEditInsert.$submitted && !formEditInsert.$valid">
+                    <label class="text-danger bold-text text-sm ng-binding">Existem campos vazios sem preenchimento.</label>
+                </p>
+                <p ng-repeat="message in messagesError">
+                    <label class="text-danger bold-text text-sm ng-binding">{{message}}</label>
+                </p>
+            </div>
+            <div class="col-md-6">
+                <fieldset>
+                    <legend>Informações do cadastro</legend>
+
+                    <div class="form-group" ng-class="{'has-error has-feedback': formEditInsert.$submitted && formEditInsert.editInsertNome.$error.required}">
+                        <label> Nome </label>
+
+                        <input type="text" class="form-control " name="editInsertNome" ng-model="itemEdit.form.nome" ng-required="true">
+
+                    </div>
+                    <div class="form-group" ng-class="{'has-error has-feedback': (formEditInsert.$submitted && formEditInsert.editInsertEmail.$error.required) || (formEditInsert.$submitted && !validateEmails)}">
+                        <label> email </label>
+
+                        <input type="text" class="form-control " name="editInsertEmail" ng-model="itemEdit.form.email" ng-required="true">
+
+                    </div>
+
+
+                    <div>
+
+                        <div class="form-group" ng-repeat="fone in itemEdit.form.fones track by $index" ng-class="{'has-error has-feedback': (formEditInsert.$submitted && formEditInsert.editInsertFones{{$index}}.$error.required) || (formEditInsert.$submitted && !validateFoneNumbers)}">
+                            <label> telefone 
+                                    <span ng-if="$index >= 1">{{$index + 1}}
+                                            <button class="btn text-uppercase text-blue-01" type="button" ng-click="removeNumberInFoneNumberLists($index)">
+                                                    - remover telefone
+                                            </button>
+                                        </span>
+                            </label>
+                            <div>
+                                <input type="text" class="form-control " name="editInsertFones{{$index}}" ng-model="fone.value" ng-required="true" mask="(99) 99999-9999" placeholder="(99) 99999-9999">
+                            </div>
+                            <br>
+
+                        </div>
+
+
+                        <div class="form-group">
+                            <button class="btn text-uppercase text-blue-01" type="button" ng-click="addNewFoneNumberInFoneNumberLists()">
+                                    + Adicionar Telefone
+                                   
+                                </button>
+                            <hr class="no-margin">
+                        </div>
+                        <br>
+                    </div>
+                    <div class="form-group" ng-class="{'has-error has-feedback': formEditInsert.$submitted && formEditInsert.editInsertObsr.$error.required}">
+                        <label> Observações </label>
+
+                        <textarea name="newMsg_info_message" id="newMsg_info_message" name="editInsertObsr" class="form-control noresize" placeholder="Digite aqui suas observações." ng-required="true" ng-model="itemEdit.form.contatoObeservacao">
+	    						</textarea>
+
+                    </div>
+                </fieldset>
+            </div>
+            <div class="col-md-6">
+                <fieldset>
+                    <legend>Informações de Endereço</legend>
+                    <div ng-repeat="endereco in itemEdit.form.enderecos track by $index" ng-init="setUfByCode($index)">
+                        <div class="form-group" ng-class="{'has-error has-feedback': formEditInsert.$submitted && formEditInsert.editInsertLogradouro{{$index}}.$error.required}">
+                            <label> Logradouro 
+                                <span ng-if="$index >= 1">{{$index + 1}}
+                                    <button class="btn text-uppercase text-blue-01" type="button" ng-click="removeLocaleInLists($index)">
+                                            - remover logradouro
+                                    </button>
+                                </span>
+                            </label>
+                            <input type="text" class="form-control " name="editInsertLogradouro{{$index}}" ng-disabled='endereco.cpfVerified' ng-model="endereco.logradouro" ng-required="true">
+                        </div>
+
+                        <div class="form-group" ng-class="{'has-error has-feedback': formEditInsert.$submitted && formEditInsert.editInsertLocal{{$index}}.$error.required}">
+                            <label> Localidade </label>
+
+                            <input type="text" class="form-control " name="editInsertLocal{{$index}}" ng-disabled='endereco.cpfVerified' ng-model="endereco.localidade" ng-required="true">
+
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-9 form-group" ng-class="{'has-error has-feedback': formEditInsert.$submitted && formEditInsert.editInsertCidade{{$index}}.$error.required}">
+                                    <label> Cidade </label>
+
+                                    <input type="text" class="form-control " name="editInsertCidade{{$index}}" ng-disabled='endereco.cpfVerified' ng-model="endereco.cidade" ng-required="true">
+                                </div>
+                                <div class="col-md-3 form-group" ng-class="{'has-error has-feedback': formEditInsert.$submitted && !endereco.ufSelected}">
+                                    <label> UF </label>
+                                    <select name="editInsertUF" ng-disabled='endereco.cpfVerified' id="editInsertUF" class="form-control custom-arrow" ng-model="endereco.ufSelected" ng-options="uf.nome for uf in itemEdit.ufList">
+			            					<option value="" class="" selected="selected">--</option>
+			    					</select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+
+                            <label> CEP </label>
+
+
+                            <div class="input-group bordered" ng-class="{'has-error has-feedback': (formEditInsert.$submitted && formEditInsert.editInsertCEP{{$index}}.$error.required) || (formEditInsert.$submitted && !validateCEP)}">
+                                <input type="text" class="form-control " ng-change="onCepChange($index)" name="editInsertCEP{{$index}}" ng-required="true" ng-model="endereco.cep" placeholder="33030-360" mask="99999-360">
+                                <span class="input-group-btn">
+					                    <button class="btn svg-bg-icon search_gray svg-md"  ng-click="searchLocaleByCEP(endereco.cep, $index)" type="button"></button>
+					                </span>
+                            </div>
+
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+
+                    <div>
+                        <button class="btn text-uppercase text-blue-01" type="button" ng-click="addNewLocaleInLists()">
+                                    + Adicionar logradouro
+                                   
+                                </button>
+                        <hr class="no-margin">
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <hr />
+        <div class="pull-right buttons">
+
+            <button type="button" class="text-uppercase btn btn-md text-sm btn-gray-01">Cancelar</button>
+            <button type="submit" class="text-uppercase btn btn-md text-sm btn-blue-01-invert">Salvar</button>
+        </div>
+    </form>
+</div>

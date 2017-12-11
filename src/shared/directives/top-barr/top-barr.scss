@@ -1,0 +1,86 @@
+.navbar {
+    margin-bottom: 0;
+
+    &.navbar-default {
+        background-color: #353F4B;
+        border: none;
+        height: 60px;
+
+        .navbar-nav {
+            > li > a {
+                color: #ACC0CB;
+                line-height: 20px;
+                padding: 10px 0;
+                border-left: 1px solid #495969;
+                font-weight: bold;
+                font-style: italic;
+                font-size: 14px;
+
+                .img-circle {
+                    border-radius: 50%;
+                    background-color: #5C697A;
+                    margin: 0 10px;
+                    border: 1px solid #5C697A;
+                    float: left;
+                }
+
+                &.dropdown-toggle {
+                    padding-right: 10px;
+
+                    small {
+                        font-weight: normal;
+                        text-transform: capitalize;
+                        color: #ACC0CB;
+                    }
+                }
+            }
+
+            .ico-arrow{
+                margin: 5px 0 5px 10px;
+                
+            }
+
+            &> .open {
+                &> a, &> a:hover, &> a:focus {
+                    background-color: #353F4B;
+                    color: #ACC0CB;
+                }
+            }
+            
+            li > .dropdown-menu {
+                width: 100%;
+            }
+        }
+
+        .navbar-brand {
+            color: #ACC0CB;
+            line-height: 30px;
+            height: 60px;
+            width: 130px;
+            text-align: center;
+            background-color: #29323B;
+            padding: 10px;
+
+            > img {
+                display: inline;
+                margin-top: -5px;
+            }
+        }
+        
+        h1 {
+            font-size: 20px;
+            font-weight: 100;
+            color: #fff;
+            padding: 16px 20px;
+            float: left;
+            margin: 0;
+
+            span {
+                    font-size: 20px;
+                    font-weight: 100;
+                    color: #7F92A3;
+            }
+
+        }
+    }
+}

@@ -1,0 +1,415 @@
+.relatorios {
+
+    .panel {
+        position: relative;
+        min-height: 300px;
+
+        .panel-heading {
+            background-color: transparent !important;
+
+            small {
+                font-style: italic;
+            }
+        }
+    }
+
+    ul.list-chart {
+        width: 100%;
+        margin-top: 20px;
+
+        li {
+            text-align: center;
+
+            > span {
+                font-style: italic;
+                color: #767676;
+                font-size: 14px;
+                font-weight: 100;
+                display: inline-block;
+                width: 100%;
+                padding-top: 5px;
+            }
+        }
+    }
+
+    .row.list-chart {
+        text-align: center;
+
+        > div > span {
+            font-style: italic;
+            color: #767676;
+            font-size: 14px;
+            font-weight: 100;
+            display: inline-block;
+            width: 100%;
+            padding-top: 5px;
+        }
+    }
+
+    ul.relatorios-legend {
+        li {
+            font-style: italic;
+            font-size: 14px;
+            font-weight: 100;
+
+            &::before {
+                display: inline-block;
+                width: 9px;
+                height: 9px;
+                content: "";
+                margin-right: 5px;
+                background-color: #DEE3E7;
+            }
+        }
+    }
+
+    .relatorios-legend {
+        position: absolute;
+        bottom: 10px;
+        width: calc(100% - 20px);
+        text-align: center;
+    }
+
+    .panel .panel-body .info-text-lg {
+        text-align: center;
+        font-size: 48px;
+        font-weight: 100;
+        padding-top: 40px;
+        font-style: italic;
+        color: #767676;
+        line-height: 35px;
+
+        small {
+            font-size: 14px;
+        }
+    }
+
+
+    //RELATORIO: Envio de mensagens.
+    &.relatorio-envio-de-mensagens {
+        ul.relatorios-legend { li:nth-child(2) { &::before { background-color: #5DC952; } } }
+    }
+    //RELATORIO: Envio de dicas.
+    &.relatorio-envio-de-dicas {
+        ul.relatorios-legend { li:nth-child(2) { &::before { background-color: #1ABEB7; } } }
+        .panel .panel-body .info-text-lg {
+            line-height: normal;
+        }
+
+        .lista-categorias-titulo {
+            color: #1ABEB7;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        ul.lista-categorias {
+            li {
+                line-height: 25px;
+                
+                span {
+                    color: #1ABEB7;
+                    font-size: 18px;
+                    font-weight: 600;
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        .dicas-por-cliente {
+            font-size: 42px;
+            text-align: center;
+            font-weight: 100;
+            font-style: italic;
+            padding-top: 36px;
+            color: #767676;
+
+            small {
+                text-transform: uppercase;
+                font-size: 14px;
+                display: inline-block;
+                width: 100%;
+
+                &::before {
+                    display: inline-block;
+                    width: 12px;
+                    height: 12px;
+                    background-color: #DEE3E7;
+                    content: '';
+                    margin-right: 5px;
+                }
+            }
+
+            &.color-01 { small::before { background-color: #1A2250 ; } }
+            &.color-02 { small::before { background-color: #727E8C ; } }
+            &.color-03 { small::before { background-color: #8AD3D9 ; } }
+        }
+
+        .list-sites {
+            li {
+                text-align: center;
+                line-height: 16px;
+                font-size: 14px;
+                padding-bottom: 25px;
+
+                p:nth-child(1) {
+                    font-size: 22px;
+                    color: #767676;
+                };
+                p:nth-child(2) {
+                    font-style: italic;
+                    text-transform: capitalize;
+
+                    span {
+                        font-size: 28px;
+                        color: #1ABEB7;
+                        font-style: normal;
+                        font-weight: 100;
+                    }
+                };
+                p:nth-child(3) {
+                    font-style: italic;
+                    text-transform: capitalize;
+
+                    span {
+                        font-size: 16px;
+                        color: #1ABEB7;
+                        font-style: normal;
+                        font-weight: 100;
+                    }
+                };
+            }
+        }
+    }
+    //RELATORIO: Desempenho.
+    &.relatorio-desempenho {
+        ul.legenda-vendas {
+            li {
+                font-size: 14px;
+                line-height: 22px;
+
+                &::before {
+                    display: inline-block;
+                    margin-right: 5px;
+                }
+
+                &:nth-child(1){
+                    &::before {
+                        content: '';
+                        width: 12px;
+                        height: 12px;
+                        background-color: #80D2DE;
+                    }
+                }
+                &:nth-child(2){
+                    &::before {
+                        content: '--';
+                        color: #FA2C2C;
+                    }
+                }
+            }
+        }
+    }
+    //RELATORIO: Coins.
+    &.relatorio-coins {
+        ul.relatorios-legend { li:nth-child(2) { &::before { background-color: #1ABEB7; } } }
+
+        .total-coins-text {
+            padding-top: 40px;
+
+            p {
+                margin-bottom: 0;
+                font-size: 34px;
+                font-weight: 100;
+                color: #757575;
+                font-style: italic;
+
+                small {
+                    font-size: 20px;
+                    font-weight: 100;
+                }
+
+                &:nth-child(2){
+                    font-size: 16px
+                }
+            }
+        }
+
+        .row-transacoes-coins {
+            .col-md-4 {
+                text-align: center;
+
+                p {
+                    font-size: 26px;
+                    font-weight: 100;
+
+                    span.description {
+                        display: inline-block;
+                        width: 100%;
+                        font-weight: 100;
+                        font-style: italic;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        .row-gestao-saldo {
+            .col-md-6 {
+                text-align: center;
+
+                p {
+                    font-size: 26px;
+                    font-weight: 100;
+
+                    small {
+                        font-weight: 100;
+                        font-style: italic;
+                        font-size: 16px;
+                    }
+
+                    span.description {
+                        display: inline-block;
+                        width: 100%;
+                        font-weight: 100;
+                        font-style: italic;
+                        font-size: 16px;
+                    }
+                }
+
+                &.right {
+                    padding-right: 20%;
+                    text-align: right;
+                }
+            }
+        }
+
+        .row-top-produtos {
+            .title {
+                text-align: center;
+                border-bottom: 1px solid #DEE3E7;
+                font-style: italic;
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            ol {
+                padding-left: 0;
+                list-style-type: none;
+                counter-reset: elementcounter;
+                padding-left: 0;
+
+                li {
+                    margin-top: 5px;
+                    font-size: 14px;
+
+                    &:before{
+                        content: "0" counter(elementcounter) " - ";
+                        counter-increment:elementcounter;
+                        font-weight: bold;
+                        font-style: italic;
+                    }
+
+                    span {
+                        font-weight: bold;
+
+                        &:before { content: '('; display: inline-block; }
+                        &:after { content: ')'; display: inline-block; }
+                    }
+                }
+            }
+
+            &:nth-child(1) {
+                .title{ border-bottom-color: #1ABEB7; color: #1ABEB7 }
+                ol li span { color: #1ABEB7 }
+            }
+            &:nth-child(2) {
+                .title{ border-bottom-color: #E55C66; color: #E55C66 }
+                ol li span { color: #E55C66 }
+            }
+        }
+
+        .ico-trocas {
+            display: block;
+            width: 75px;
+            height: 75px;
+            margin: 0 auto;
+            .st0 {
+                fill: #2EB9D0;
+            }
+        }
+        .ico-moedas {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+
+            &.big {
+                width: 50px;
+                height: 50px;
+            }
+
+	        .st0 {
+                stroke:#2CBAD0;
+            }
+        }
+    }
+    //RELATORIO: Humor.
+    &.relatorio-humor {
+        .table-motivos-humor {
+            margin-bottom: 0;
+            
+            tbody {
+                tr:nth-child(even) {
+                    td, th {
+                        background-color: #EEEEEE;
+                    }
+                }
+            }
+
+            td, th {
+                font-size: 14px;
+            }
+
+            th {
+                color: #7E909E;
+                padding: 2px 2px 2px 20px;
+            }
+
+
+            td {
+                text-align: center;
+                padding: 2px;
+            }
+
+            thead {
+                th {
+                    font-size: 16px;
+                    font-style: italic;
+                }
+                td, th {
+                    background-color: #EEEEEE;
+                }
+            }
+
+            th.th-icon {
+                padding-left: 2px;
+                text-align: center;
+
+                span {
+                    width: 30px;
+                    height: 30px;
+                    display: inline-block;
+                }
+            }
+        }
+
+        .ico-chart {
+            padding: 0px;
+        }
+        .ico-chart-legend {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            margin-bottom: -10px;
+        }
+    }
+}

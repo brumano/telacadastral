@@ -1,0 +1,52 @@
+.container-nova-msg{
+	.form-group{
+		textarea{
+			&.form-control{
+				height: 100px;
+			}
+		}
+		
+		.button-plus_gray{
+		    float: left;
+			margin-top: 10px;
+		}
+
+	}
+
+	
+}
+
+.modal{
+		.modal-body{
+			.container-destiny{
+				.radio{
+					margin: 0 10px;
+				}
+			}
+			.container-operation{
+				.citys-container{
+					.well{
+						min-height: 240px;
+					}
+				}
+				.grupos-container{
+				    padding-top: 26px;
+					.item-grupo{
+						margin-bottom: 15px;
+						label{
+							font-weight: normal;
+							font-style: italic;
+						}
+
+						.svg-bg-icon{
+							    margin-right: 5px;
+							    margin-top: -2px;
+						}
+					}
+				}
+			}
+
+		}
+}
+
+

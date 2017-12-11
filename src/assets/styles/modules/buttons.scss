@@ -1,0 +1,203 @@
+
+@import "../_core/variables";
+
+@mixin btn-state($color1:#fff, $color2:#fff) {
+    border-color: $color1;
+    color: $color1;
+  
+    &:hover,
+    &:active,
+    &.active {
+        background-color: $color1;
+        color: $color2;
+    }
+}
+
+@mixin btn-state-invert($color1:#fff, $color2:#fff) {
+    color: $color2;
+    background-color: $color1;
+  
+    &:hover,
+    &:active,
+    &.active {
+        border-color: $color1 !important;
+        background-color: #fff;
+        color: $color1;
+    }
+}
+
+
+
+.btn {
+
+	border-radius: 20px;
+    font-size: $fnt-sm;
+    font-weight: bold;
+    background-color: transparent;
+    padding: 5px 20px;
+    border-color: transparent;
+
+    &.focus,&:focus{
+        background: transparent;    
+    }
+    &:active.focus, &.active.focus, &:active:focus, &.active:focus, &:hover, &:active, &.active, &.visited, &.focus, &:focus {
+        box-shadow: none;
+        outline: 0px auto -webkit-focus-ring-color;
+        outline-offset: 0;
+    }
+   
+    &.btn-xsm {
+        padding: 5px 10px;
+        font-size: $fnt-xsm;
+    }
+    &.btn-sm {
+        padding: 8px 25px;
+        font-size: $fnt-sm;
+        line-height: 15px;
+    }
+    &.btn-md {
+    	padding: 10px 30px;
+        font-size: $fnt-md;
+        border-radius: 23px;
+    }
+    &.btn-lg {
+    	padding: 13px 30px;
+        font-size: $fnt-lg;
+        border-radius: 25px;
+    }
+    &.btn-xlg {
+    	padding: 15px 30px;
+        font-size: $fnt-lg;
+        border-radius: 30px;
+    }
+
+    &.min-radious{
+        border-radius: 5px;
+        padding: 5px 13px;
+    }
+
+    &.btn-success {
+        @include btn-state-invert(#34B53F);
+    }
+    &.btn-danger {
+        @include btn-state-invert(#E9696A);
+    }
+    &.btn-warning{
+        @include btn-state-invert(#EABA4B);
+        
+    }
+    &.btn-default{
+        border: solid 2px #D1D1D1;
+        color: #8797A6;
+        
+        &:hover{
+            background-color:#8797A6;
+            color: #fff;
+            border-color:transparent;
+        }
+    }
+    &.btn-plus_gray{
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzAwIDMwMCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzAwIDMwMDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+LnN0MHtmaWxsOiM3RTkxOUY7fTwvc3R5bGU+PGc+PHBhdGggY2xhc3M9InN0MCIgZD0iTTI2NS45LDEzMS45aC05Ny44VjM0LjFjMC00LjUtNi0xNC4xLTE4LjEtMTQuMXMtMTguMSw5LjctMTguMSwxNC4xdjk3LjhIMzQuMWMtNC41LDAtMTQuMSw2LTE0LjEsMTguMXM5LjcsMTguMSwxNC4xLDE4LjFoOTcuOHY5Ny44YzAsNC41LDYsMTQuMSwxOC4xLDE0LjFzMTguMS05LjcsMTguMS0xNC4xdi05Ny44aDk3LjhjNC41LDAsMTQuMS02LDE0LjEtMTguMVMyNzAuMywxMzEuOSwyNjUuOSwxMzEuOUwyNjUuOSwxMzEuOXoiLz48L2c+PC9zdmc+) no-repeat;
+        border: solid 1px #d1d1d1;
+        width: 40px;
+        height: 40px;
+        background-size: 50%;
+        background-position: 50%;
+        
+        &:hover{
+             border: solid 1px transparent;
+             background-color: #d1d1d1;
+        }
+    }
+
+    &.btn-black { @include btn-state($paleta-blk); }
+	&.btn-white { @include btn-state($paleta-wht); }
+	&.btn-blue-01 { @include btn-state($paleta-01); }
+    &.btn-blue-02 {    @include btn-state($paleta-02);}
+	
+    &.btn-green-01 { @include btn-state($paleta-04);}
+    &.btn-gray-01 { @include btn-state($paleta-07);}
+    &.btn-pink-01 { @include btn-state($paleta-09);}
+    &.btn-purple-01 { @include btn-state($paleta-11);}
+    &.btn-yellow-01 { @include btn-state($paleta-12);}
+	
+   
+	/*--invert colors*/
+
+    &.btn-black-invert { @include btn-state-invert($paleta-blk);}
+	&.btn-white-invert { @include btn-state-invert($paleta-wht);}
+
+	&.btn-blue-01-invert { @include btn-state-invert($paleta-01);}
+    &.btn-blue-02-invert {    @include btn-state-invert($paleta-02);}
+	&.btn-green-01-invert { @include btn-state-invert($paleta-04);}
+	&.btn-gray-01-invert { @include btn-state-invert($paleta-07);}
+	&.btn-pink-01-invert { @include btn-state-invert($paleta-09);}
+    &.btn-purple-01-invert { @include btn-state-invert($paleta-11);}
+	&.btn-yellow-01-invert { @include btn-state-invert($paleta-12);}
+
+    &.btn-adv-search-filter{
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #D7DCE0;
+        font-weight: normal;
+        font-size: 14px;
+        span{
+            color: #525254;
+        }
+        .svg-container{
+            margin-left: 10px;
+            svg{
+                margin-bottom: -3px;
+                path{
+                    fill: #7E919F;
+                }
+            }
+        }
+
+    }
+	
+    &.btn-link {
+        padding: 0;
+    }
+}
+
+.btn{
+    &.custom_radio-button{
+        margin: 0;
+        padding: 0;
+        margin-bottom: 10px;
+        width: 100%;
+        text-align: left;
+
+        .radio{
+
+            background-color: transparent;
+            width: 20px;
+            height: 20px;
+            padding: 2px;
+            border-radius: 4px;
+            border-color: #7E919F;
+            border-width: 2px;
+            margin: 0;
+            margin-top: -5px;
+
+            > span{
+                background-color: #7e919f;
+                width: 12px;
+                height: 12px;
+                display: block;
+                border-radius: 3px;
+            }
+        }
+        .title{
+            font-size: 16px;
+            font-style: italic;
+            margin-left: 8px;
+        }
+        &.hover, &:hover, &.active, &:active{
+           .radio{
+                > span{ background-color: #0199fe; }
+            }
+        }
+    }
+}

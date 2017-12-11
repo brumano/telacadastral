@@ -1,0 +1,15 @@
+@mixin animate-item($property: all, $duration:0.3s, $transition:ease-in-out, $delay:0s, $fillMode: both ){
+	-webkit-transition: $property $duration $transition $delay;
+	-moz-transition: $property $duration $transition $delay;
+	-ms-transition: $property $duration $transition $delay;
+	-o-transition: $property $duration $transition $delay;
+	transition: $property $duration $transition $delay;
+	-webkit-animation-fill-mode: $fillMode;
+	/*-moz-animation-fill-mode: $fillMode;*/
+	animation-fill-mode: $fillMode;
+	
+}
+
+.animated{
+	@include animate-item();  
+}

@@ -1,0 +1,1 @@
+var App = angular.module("Application", ['ngRoute', 'ngMask', 'ngSanitize', 'ngMessages', 'ui.bootstrap']);

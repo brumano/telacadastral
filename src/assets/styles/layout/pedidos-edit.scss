@@ -1,0 +1,25 @@
+.orderState-group {
+
+    label {
+        color: #7F919F;
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+
+    margin-top: 20px;
+    
+    hr {
+        margin-top: 0;
+    }
+
+    .row {
+        .col-md-3 {
+            padding-bottom: 10px;
+            line-height: 12px;
+
+            b {
+                line-height: 22px;
+            }
+        }
+    }
+}

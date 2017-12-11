@@ -1,0 +1,52 @@
+.btn{
+	&.svg_button{
+		margin: 0;
+		padding: 0;
+	    background-repeat: no-repeat;
+
+		&.button-plus_gray {
+			background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzAwIDMwMCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzAwIDMwMDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+LnN0MHtmaWxsOiM3RTkxOUY7fTwvc3R5bGU+PGc+PHBhdGggY2xhc3M9InN0MCIgZD0iTTI2NS45LDEzMS45aC05Ny44VjM0LjFjMC00LjUtNi0xNC4xLTE4LjEtMTQuMXMtMTguMSw5LjctMTguMSwxNC4xdjk3LjhIMzQuMWMtNC41LDAtMTQuMSw2LTE0LjEsMTguMXM5LjcsMTguMSwxNC4xLDE4LjFoOTcuOHY5Ny44YzAsNC41LDYsMTQuMSwxOC4xLDE0LjFzMTguMS05LjcsMTguMS0xNC4xdi05Ny44aDk3LjhjNC41LDAsMTQuMS02LDE0LjEtMTguMVMyNzAuMywxMzEuOSwyNjUuOSwxMzEuOUwyNjUuOSwxMzEuOXoiLz48L2c+PC9zdmc+);
+			width: 20px;
+			height: 20px;
+		}
+
+		&.button-minus_gray {
+			background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzAwIDMwMCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzAwIDMwMDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+LnN0MHtmaWxsOiM3RTkxOUY7fTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTI0NS45LDEzMS45aC05NGgtMy44aC05NGMtNC41LDAtMTQuMSw2LTE0LjEsMTguMWMwLDEyLjEsOS43LDE4LjEsMTQuMSwxOC4xaDk0djBoOTcuOGM0LjUsMCwxNC4xLTYsMTQuMS0xOC4xQzI2MCwxMzcuOSwyNTAuMywxMzEuOSwyNDUuOSwxMzEuOXoiLz48L3N2Zz4=);
+			width: 20px;
+			height: 20px;
+		}
+
+		
+
+
+		&.btn-xsm{
+	        width: 15px;
+	        height: 15px;
+		}
+		&.btn-sm{
+	        width: 24px;
+	        height: 24px;
+		}
+		&.btn-md{
+	        width: 30px;
+		    height: 30px;
+		}
+		&.btn-lg{
+	        width: 40px;
+		    height: 40px;
+		}
+		&.btn-xlg{
+	        width: 100px;
+		    height: 100px;
+		}
+	}
+}
+
+/*border-color: #D1D1D1;
+    width: 40px;
+    height: 40px;
+    
+    background-size: 20px;
+    border-radius: 5px;
+    background-position-x: 9px;
+    background-position-y: 9px;*/

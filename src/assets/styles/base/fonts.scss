@@ -1,0 +1,22 @@
+@import "../_core/variables";
+
+@mixin fontFace($name, $weight, $style, $fileName){
+    font-family: $name;
+    src: url(#{$root + "fonts/open/" + $fileName + '.woff2'}) format('woff2'),
+         url(#{$root + "fonts/open/" + $fileName + '.woff'}) format('woff');
+    font-weight: $weight;
+    font-style: $style;
+}
+
+@font-face { @include fontFace('open', bold,    normal, 'opensans-bold-webfont' ); }
+@font-face { @include fontFace('open', bold,    italic, 'opensans-bolditalic-webfont' ); }
+@font-face { @include fontFace('open', normal,  italic, 'opensans-italic-webfont' ); }
+@font-face { @include fontFace('open', 100,     normal, 'opensans-light-webfont' ); }
+@font-face { @include fontFace('open', 100,     italic, 'opensans-lightitalic-webfont' ); }
+@font-face { @include fontFace('open', normal,  normal, 'opensans-regular-webfont' ); }
+
+
+
+
+
+
